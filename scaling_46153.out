@@ -1,0 +1,615 @@
+Loaded modules:
+
+MPI information:
+/shared/opt/easybuild/software/OpenMPI/5.0.7-GCC-14.2.0/bin/mpirun
+mpirun (Open MPI) 5.0.7
+
+Report bugs to https://www.open-mpi.org/community/help/
+
+Current directory: /shared/home/adilet.akimshe/courses/phys421/a4
+Files in directory:
+total 79K
+-rwx--x--x. 1 adilet.akimshe adilet.akimshe  431 Oct 20 13:00 Makefile
+-rwxrwxr-x. 1 adilet.akimshe adilet.akimshe  43K Oct 21 07:01 mandelbrot_mpi
+-rwx--x--x. 1 adilet.akimshe adilet.akimshe 8.8K Oct 20 13:00 mandelbrot_mpi.cpp
+-rwxrwxr-x. 1 adilet.akimshe adilet.akimshe  38K Oct 21 07:01 mandelbrot_serial
+-rw-r--r--. 1 adilet.akimshe adilet.akimshe 5.0K Oct 21 06:50 mandelbrot_serial.cpp
+-rwx--x--x. 1 adilet.akimshe adilet.akimshe 3.2K Oct 21 07:18 run_scaling.sh
+-rwx--x--x. 1 adilet.akimshe adilet.akimshe 3.2K Oct 20 13:19 scaling_45751.out
+-rw-rw-r--. 1 adilet.akimshe adilet.akimshe 8.5K Oct 21 00:39 scaling_45988.out
+-rw-rw-r--. 1 adilet.akimshe adilet.akimshe  703 Oct 21 07:16 scaling_46152.err
+-rw-rw-r--. 1 adilet.akimshe adilet.akimshe 2.4K Oct 21 07:14 scaling_46152.out
+-rw-rw-r--. 1 adilet.akimshe adilet.akimshe  625 Oct 21 07:18 scaling_46153.err
+-rw-rw-r--. 1 adilet.akimshe adilet.akimshe  269 Oct 21 07:18 scaling_46153.out
+
+Compiling program...
+rm -f mandelbrot_serial mandelbrot_mpi
+rm -f frame_*.ppm
+rm -f *.o
+g++ -O3 -std=c++11 -Wall -o mandelbrot_serial mandelbrot_serial.cpp -lm
+mpicxx -O3 -std=c++11 -Wall -o mandelbrot_mpi mandelbrot_mpi.cpp -lm
+
+Checking executable:
+-rwxrwxr-x. 1 adilet.akimshe adilet.akimshe 43K Oct 21 07:18 mandelbrot_mpi
+mandelbrot_mpi: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, not stripped
+
+==========================================
+Mandelbrot Scaling Test
+==========================================
+Parameters:
+  n_max = 2000
+  Resolution = 2400x2000
+  Frames = 120
+  Center: -0.7436438870371587, 0.1318259042053120
+
+Starting scaling tests...
+
+==========================================
+Running with 1 MPI processes
+==========================================
+
+Run 1/3 with 1 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 1
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 1862.07 seconds
+Time per frame: 15.5172 seconds
+
+Run 2/3 with 1 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 1
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 1863.93 seconds
+Time per frame: 15.5328 seconds
+
+Run 3/3 with 1 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 1
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 1863.22 seconds
+Time per frame: 15.5268 seconds
+
+
+==========================================
+Running with 2 MPI processes
+==========================================
+
+Run 1/3 with 2 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 2
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 1 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 1842.8 seconds
+Time per frame: 15.3567 seconds
+
+Run 2/3 with 2 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 2
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 1 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 1842.51 seconds
+Time per frame: 15.3543 seconds
+
+Run 3/3 with 2 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 2
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 1 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 1842.95 seconds
+Time per frame: 15.3579 seconds
+
+
+==========================================
+Running with 4 MPI processes
+==========================================
+
+Run 1/3 with 4 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 4
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 3 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 608.6 seconds
+Time per frame: 5.07166 seconds
+
+Run 2/3 with 4 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 4
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 3 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 610.289 seconds
+Time per frame: 5.08574 seconds
+
+Run 3/3 with 4 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 4
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 3 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 609.482 seconds
+Time per frame: 5.07902 seconds
+
+
+==========================================
+Running with 8 MPI processes
+==========================================
+
+Run 1/3 with 8 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 8
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 7 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 273.192 seconds
+Time per frame: 2.2766 seconds
+
+Run 2/3 with 8 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 8
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 7 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 273.546 seconds
+Time per frame: 2.27955 seconds
+
+Run 3/3 with 8 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 8
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 7 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 273.888 seconds
+Time per frame: 2.2824 seconds
+
+
+==========================================
+Running with 16 MPI processes
+==========================================
+
+Run 1/3 with 16 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 16
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 15 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 127.419 seconds
+Time per frame: 1.06182 seconds
+
+Run 2/3 with 16 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 16
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 15 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 127.517 seconds
+Time per frame: 1.06264 seconds
+
+Run 3/3 with 16 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 16
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 15 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 127.607 seconds
+Time per frame: 1.06339 seconds
+
+
+==========================================
+Running with 32 MPI processes
+==========================================
+
+Run 1/3 with 32 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 32
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 31 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 66.4476 seconds
+Time per frame: 0.55373 seconds
+
+Run 2/3 with 32 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 32
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 31 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 66.4038 seconds
+Time per frame: 0.553365 seconds
+
+Run 3/3 with 32 processes:
+Mandelbrot Set Generator (MPI Parallel)
+========================================
+MPI processes: 32
+Max iterations: 2000
+Center: (-0.743644, 0.131826)
+Resolution: 2400 x 2000
+Initial pixel size: 0.001
+Zoom per second: 1.5
+Number of frames: 120
+Store images: no
+
+Master: Distributing 120 frames to 31 workers
+Progress: 10/120 frames
+Progress: 20/120 frames
+Progress: 30/120 frames
+Progress: 40/120 frames
+Progress: 50/120 frames
+Progress: 60/120 frames
+Progress: 70/120 frames
+Progress: 80/120 frames
+Progress: 90/120 frames
+Progress: 100/120 frames
+Progress: 110/120 frames
+Progress: 120/120 frames
+
+Total time: 66.4985 seconds
+Time per frame: 0.554154 seconds
+
+
+==========================================
+Running with 64 MPI processes
+==========================================
+
+Run 1/3 with 64 processes:
+
+Run 2/3 with 64 processes:
+
+Run 3/3 with 64 processes:
+
+
+==========================================
+All scaling tests completed!
+==========================================
+
+Results summary:
+Process counts tested: 1 2 4 8 16 32 64
+Runs per configuration: 3
+
+Check the output file for detailed timing results.
